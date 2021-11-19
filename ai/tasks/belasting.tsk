@@ -1,0 +1,23 @@
+<BFAITaskTemplateList>
+    <BFAITaskTemplate Name="DutchIncomeTax" Priority="10" UniqueID="animal:DutchIncomeTax">
+        <BFAICreateData>
+            <Subjects>
+                <animal />
+            </Subjects>
+            <Targets>
+                <self />
+            </Targets>
+            <Objects></Objects>
+        </BFAICreateData>
+        <BFAIEvalData fixedScore="10000" />
+        <BFBehExecTask>
+            <BFBehScript context="behavior" file="scripts/DutchIncomeTax/Program.lua" function="CalcIncomeTax" />
+        </BFBehExecTask>
+        <BFAICompletionData />
+        <BFAIFailureData>
+            <BFBehExecTask>
+                <BFBehPlaySet behSet="FailureSet" />
+            </BFBehExecTask>
+        </BFAIFailureData>
+    </BFAITaskTemplate>
+</BFAITaskTemplateList>
